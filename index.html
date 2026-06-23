@@ -1,0 +1,189 @@
+<nav class="navbar">
+    <div class="brand">FROZONE.VVS</div>
+
+    <ul>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#builder">Build Your Grill</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#quote">Quote</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.navbar ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+}
+
+.navbar a:hover{
+color:gold;
+}
+
+.sparkle{
+position:fixed;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+<section id="builder">
+
+<h2 class="section-title">
+Build Your Grill
+</h2>
+
+<form>
+
+<label>Number of Teeth</label>
+
+<select id="teeth">
+<option value="100">1 Tooth</option>
+<option value="400">4 Teeth</option>
+<option value="800">8 Teeth</option>
+<option value="1200">Top 8</option>
+<option value="2400">Top & Bottom</option>
+</select>
+
+<label>Material</label>
+
+<select id="material">
+<option value="1">Sterling Silver</option>
+<option value="1.3">10K Gold</option>
+<option value="1.5">14K Gold</option>
+<option value="1.8">18K Gold</option>
+<option value="1.7">Rose Gold</option>
+</select>
+
+<button type="button" onclick="estimatePrice()">
+Estimate Price
+</button>
+
+<h3 id="result"></h3>
+
+</form>
+
+</section>
+<script>
+
+function estimatePrice(){
+
+let teeth =
+document.getElementById("teeth").value;
+
+let material =
+document.getElementById("material").value;
+
+let total =
+Math.round(teeth * material);
+
+document.getElementById("result")
+.innerHTML =
+"Estimated Starting Price: $" + total;
+
+}
+
+</script>
+<section>
+
+<h2 class="section-title">
+Instagram
+</h2>
+
+<div class="gallery">
+
+<img src="ig1.jpg">
+<img src="ig2.jpg">
+<img src="ig3.jpg">
+
+</div>
+
+<a class="btn"
+href="https://instagram.com/frozone.vvs/"
+target="_blank">
+
+Follow On Instagram
+
+</a>
+
+</section>
+<section>
+
+<h2 class="section-title">
+Secure Your Order
+</h2>
+
+<p style="text-align:center;">
+Custom orders require a deposit before production begins.
+</p>
+
+<div style="text-align:center;margin-top:20px;">
+
+<a class="btn"
+href= "https://cash.app/$bluehunnits16 ">
+
+Pay Deposit
+
+</a>
+
+</div>
+
+</section>
+<a href="tel:8172319333"
+class="callbtn">
+
+📞
+
+</a>
+.callbtn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:gold;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+color:black;
+box-shadow:0 0 20px gold;
+z-index:1000;
+}
+<img src="chain1.jpg">
+<img src="pendant1.jpg">
+
+<video controls>
+<source src="grillvideo.mp4">
+</video>
